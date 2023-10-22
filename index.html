@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10">
+        猪猪侠拯救世界猪猪侠拯救世界猪猪侠拯救世界
+        猪猪侠拯救世界猪猪侠拯救世界猪猪侠拯救世界
+        猪猪侠拯救世界猪猪侠拯救世界猪猪侠拯救世界
+        猪猪侠拯救世界猪猪侠拯救世界猪猪侠拯救世界
+
+        猪猪侠拯救世界猪猪侠拯救世界猪猪侠拯救世界
+        哈哈哈哈哈猪猪侠
+    </textarea>
+    <br>
+    <button class="btn" disabled>我已经阅读用户协议(6)</button>
+    <script>
+        let btn = document.querySelector('.btn')
+        let i = 6
+        let timer= setInterval(function () {
+            i--
+            btn.innerHTML = '我已经阅读用户协议(${i})'
+            if(i===0){
+                clearInterval(timer)
+                // 开启按钮
+                btn.disabled = false
+                // 更换文字
+                btn.innerHTML = '该同意协议啦'
+            }
+        },1000)
+    </script>
+</body>
+</html>
